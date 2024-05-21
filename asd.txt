@@ -1,1 +1,0 @@
-hacerSuma(papas,hamburguesa,nugget)

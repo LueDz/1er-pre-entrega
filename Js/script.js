@@ -3,11 +3,8 @@ let resultado;
 let ingreseDireccion = "Pedido completado ingrese su direccion:";
 let metodoDePago = "Ingresa 1 si pagas con efectivo o 2 si pagas con trasferencia";
 let vacio = " ";
-const suma = (a, b, c) => a + b + c;
+const resta = (a, b) => a - b;
 
-function hacerSuma(art1, art2, art3) {
-    resultado = art1 + art2 + art3;
-};
 
 let bienvenida = prompt("Ingrese su nombre")
 let menu = parseInt(prompt("Hola" + vacio + bienvenida + vacio + "este es el menu de inicio: 1-Ingresa 1 si queres comprar comida 2-Ingresa 2 si queres comprar bebida"))
@@ -38,7 +35,18 @@ switch (menu) {
 
         break;
     case 2:
-        alert("Bienvenido a la venta de bebidas")
+
+        let ingreseEdad = parseInt(prompt("Ingresa tu anio de nacimiento para confirmar que seas mayor"))
+
+        let mayorDeEdad = alert("Tu edad es de" + vacio + resta(2024, ingreseEdad) + vacio + "anios")
+
+        if (ingreseEdad <= 2006) {
+            alert("Bienvenido a la venta de bebidas")
+        } else {
+            alert("ACESO DENEGADO")
+            break;
+        }
+
 
         let agua = parseInt(prompt("Cuantas aguas queres comprar 1, 2 o 3?"));
         let gaseosa = parseInt(prompt("Cuantas gaseosas queres comprar 1, 2 o 3?"));
